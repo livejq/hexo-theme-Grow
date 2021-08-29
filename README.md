@@ -1,14 +1,31 @@
-# hexo-theme-Annie
-Annie是一个简单的Hexo博客主题，如果你喜欢散文、诗歌、小说......那么它可能合你心意!  [预览 | PREVIEW](https://sariay.github.io/2018/08/27/Annie主题使用说明/)
+<h1 align="center">hexo-theme-Grow</h1>
 
-<img src="https://github.com/Sariay/hexo-theme-Annie/blob/master/source/img/Annie.png" class="full-image" />
+<br>
+
+<p align="center">
+	<a href="https://hexo.io/"><img alt="SceneBuilder" src="https://img.shields.io/badge/Hexo-3.9.0-9cf"></a>
+     <a href="https://github.com/livejq/hexo-theme-Grow/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/livejq/hexo-theme-Grow.svg"></a>
+	<a href="https://github.com/livejq/hexo-theme-Grow/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/livejq/hexo-theme-Grow.svg"></a>
+</p>
+
+<br>
+
+<p align="center">
+<span>一个简单的Hexo博客主题，由 <a href="https://github.com/Sariay/hexo-theme-Annie/" target="_blank">Annie</a> 主题修改而来，感谢 <a href="https://github.com/Sariay/" target="_blank">Sariay</a>!</span>
+</p>
+
+
+
+<hr>
+<a href="https://www.livejq.top/" target="_blank">预览 | PREVIEW</a>
+
 
 ### 安装&启用
 
 ```bash
-git clone https://github.com/Sariay/hexo-theme-Annie.git
+git clone https://github.com/livejq/hexo-theme-Grow.git
 ```
-然后，将站点目录下的`_config.yml`文件中的`theme`字段修改为Annie。
+然后，将站点目录下的`_config.yml`文件中的`theme`字段修改为Grow。
 
 ### 站点配置
 
@@ -87,7 +104,7 @@ prism_plugin:
 
 ### 主题配置
 
-你可以阅读文章 [《Annie主题使用说明》](https://sariay.github.io/2018/08/27/Annie主题使用说明/) 获取相关模块的信息，例如页头背景、相册、评论、文章点赞 !
+你可以阅读文章 [《Grow主题使用说明》](https://livejq.github.io/2018/08/27/Grow主题使用说明/) 获取相关模块的信息，例如页头背景、相册、评论、文章点赞 !
 
 ### 文章配置
 
@@ -105,49 +122,17 @@ tags: tags
 
 ### 主题更新
 
-如果你使用主题后，几乎未改动代码，那么可以使用下面的`命令行`更新主题。
+此主题不再更新维护。
 
-```
-cd themes/Annie
-git pull
-```
-
-如果你使用主题后，自定义改动相当多的代码，推荐下载源码包以进行定制！
-
-### 其他方面
-
-如果你有问题反馈:  [issues](https://github.com/Sariay/hexo-theme-Annie/issues) | 1261347403@qq.com（请务必先于**issues**中寻找答案）
-
-如果你喜欢该主题:  [star](https://github.com/Sariay/hexo-theme-Annie)						（**star**越多，更新的动力越大😂）
-
-如果你想定制主题:  [fork](https://github.com/Sariay/hexo-theme-Annie/fork)						（当然，**Annie**亦期待你的贡献）
-
-### Contributor
-
-一些pull request的代码由于项目重构而未能进行merge（或者issues），重构过程中参考了这些issues。
-
-zxdawn [#6](https://github.com/Sariay/hexo-theme-Annie/issues/6)
-
-Dinghow [#10](https://github.com/Sariay/hexo-theme-Annie/pull/10)
-
-miracleqi [#16](https://github.com/Sariay/hexo-theme-Annie/issues/16)
-
-### Todo
+### 主要功能
 
 - [x] 评论功能
 - [x] 文章目录
-- [x] 文章点赞💗
 - [x] 阅读计数
 - [x] 相关文章
 - [x] 相册模块
-- [ ] 谷歌统计
-- [ ] 文章分享功能
-- [ ] 文章目录优化
-- [ ] 文章字体调整
-- [ ] 语言支持优化 [4](https://github.com/Sariay/hexo-theme-Annie/issues/6#issue-369754545)
-- [ ] 相册图片利用 [5](https://github.com/Sariay/hexo-theme-Annie/issues/6#issue-369754545)
-- [ ] valine与<u>文章阅读计数</u>的冲突问题，参考[valine官网](https://valine.js.org/visitor.html)、[next主题案例](https://valine.js.org/visitor.html)（注：当前使用DesertsP版的[valine](https://github.com/DesertsP/Valine)）
-- [ ] ...
+- [x] 谷歌统计
+- [x] 文章分享功能
 
 ### Thanks
 
