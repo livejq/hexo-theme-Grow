@@ -1,0 +1,38 @@
+<div class="layout-comment">
+
+	<% if(theme.comment.enable) { %>
+
+	<% if(theme.gitalk.enable) { %>
+
+	<!-- comment gitalk -->
+	<%- partial('comment/gitalk') %>
+
+	<% } else if( theme.valine.enable ) { %>
+
+	<!-- comment valine -->
+	<%- partial('comment/valine') %>
+
+	<% } else if(theme.livere.enable) { %>
+
+	<!-- comment livere -->
+	<%- partial('comment/livere') %>
+
+	<% } else if(theme.changyan.enable) { %>
+
+	<!-- comment changyan -->
+	<%- partial('comment/changyan') %>
+
+	<% } else if(theme.disqus.enable) { %>
+
+		<!-- comment disqus -->
+		<%- partial('comment/disqus') %>
+
+	<% } else { %>
+
+	<!-- I don't know 【表情】-->
+
+	<% } %>
+
+	<% } %>
+
+</div>

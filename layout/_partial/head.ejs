@@ -1,0 +1,138 @@
+<%
+  var pagetitle = page.title;
+
+  if (is_home()) {
+
+    pagetitle = config.title;
+
+  } else if (is_archive()) {
+
+    pagetitle = __('archive_a');
+
+    if (is_month()) {
+
+      pagetitle += ' : ' + page.year + '/' + page.month;
+
+    }else if (is_year()) {
+
+      pagetitle += ' : ' + page.year;
+
+    }
+
+    pagetitle = pagetitle + ' ' + '|' + ' ' + config.title;
+
+  } else if (is_category()) {
+
+    pagetitle = __('category') + ' ' + '|' + ' ' + config.title;;
+
+  } else if (is_tag()) {
+
+    pagetitle = __('tag') + ' ' + '|' + ' ' + config.title;;
+
+  } else if (is_current('friends')) {
+
+    pagetitle = __('friends') + ' ' + '|' + ' ' + config.title;
+
+  } else {
+
+    pagetitle = pagetitle + ' ' + '|' + ' ' + config.title;
+  }
+%>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title><%= pagetitle %></title>
+  <meta name="author" content="<%- config.author %>">
+  <% if (page.keywords && page.description) { %>
+  <meta name="keywords" content="<%- page.keywords %>">
+  <meta name="description" content="<%- page.description %>">
+  <% } else { %>
+  <meta name="keywords" content="<%- config.keywords %>">
+  <meta name="description" content="<%- config.description %>">
+  <% } %>
+  <meta name="baidu-site-verification" content="MN5KDkxxm6">
+  <%- favicon_tag(theme.favicon) %>
+  <script src="<%- theme.cdn.jquery %>"></script>
+
+  <% if (theme.hackFont.enable) { %>
+  <link rel="stylesheet" href="<%- theme.cdn.hackFont %>" type="text/css">
+  <% } %>
+
+  <%- css('css/style.css') -%>
+  <% if(page.entitle){ %>
+  <%- css('css/custom.css') -%>
+  <% } %>
+
+  <% if(page.type === "about" && theme.aboutSite.enable){ %>
+  <%- css('css/time.css') -%>
+  <% } %>
+
+  <% if(page.type === "gallery" && theme.macy.enable){ %>
+  <% if (theme.macy.fancybox) { %>
+  <link rel="stylesheet" type="text/css" href="<%- theme.cdn.jquery_fancybox_min %>">
+  <% } %>
+  <%- css('plugin/gallerypage/macy.css') %>
+  <% } else if (page.type === "friends") { %>
+  <%- css('css/friends.css') -%>
+  <%- js('js/autofds.js') -%>
+  <% } %>
+
+  <% if (theme.aplayer.enable && page.type === "about") { %>
+  <link rel="stylesheet" href="<%- theme.cdn.aplayer_min_css %>">
+  <% } %>
+
+  <% if (theme.Google_Adsense.enable) { %>
+  <!-- Google Adsense -->
+  <% if (theme.Google_Adsense.manual && is_post()) { %>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "<%- theme.Google_Adsense.google_ad_client %>",
+      enable_page_level_ads: true
+    });
+  </script>
+  <% } else if (theme.Google_Adsense.google_auto_ads){ %>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "<%- theme.Google_Adsense.google_ad_client %>",
+      enable_page_level_ads: true
+    });
+  </script>
+  <% } else if (theme.Google_Adsense.amp_auto_ads) {%>
+  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+  <% } %>
+  <% } %>
+
+  <% if (theme.daovoice.enable && is_page()) { %>
+  <!-- DaoVoice -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["DaoVoiceObject"] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      a.charset = "utf-8";
+      m.parentNode.insertBefore(a, m)
+    })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+      "//widget.daovoice.io/widget/a2f69918.js", "daovoice")
+  </script>
+  <% } %>
+  <!-- Custom -->
+  <script>
+    document.onkeydown = function (e) {
+      var keyCode = e.keyCode || e.which || e.charCode;
+      if (keyCode == 123) {
+        e.returnValue = false;
+      }
+    }
+    document.oncontextmenu = function () {
+      return false;
+    }
+  </script>
+</head>

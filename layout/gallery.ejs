@@ -1,0 +1,28 @@
+<% if (theme.macy.enable) { %>
+<section class="section">
+    <div class="container">
+        <ul class="feature-list"></ul>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div id="macy-container" class="imglist">
+            <% if (site.data && site.data.gallery) { %>
+            <% var imgs = site.data.gallery; %>
+            <% for (var i = 0, len = imgs.length; i < len; i++) { %>
+            <% var img = imgs[i]; %>
+            <div class="demo">
+                <a href="<%- img.links %>" data-fancybox="gallery" data-caption="<%- img.title %>">
+                    <img src="<%- img.links %>" title="<%- img.title %>" class="demo-image">
+                </a>
+            </div>
+            <% } %>
+            <% } %>
+        </div>
+    </div>
+</section>
+<% if (theme.macy.fancybox) { %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<% } %>
+<script src="/plugin/gallerypage/macy.js"></script>
+<% } %>

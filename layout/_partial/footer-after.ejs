@@ -1,0 +1,63 @@
+<% if (theme.motto.enable) { %>
+<%- partial('third/motto') %>
+<% } %>
+
+<% if (theme.local_search.enable) { %>
+<%- partial('_partial/third/search') %>
+<% } %>
+
+<% if (theme.love.enable) { %>
+<%- js('js/love.js') %>
+<% } %>
+
+<!--back to top-->
+<% if (theme.totop.enable) { %>
+<%- partial('_partial/widget/totop') %>
+<% } %>
+
+<% if(page.type === "gallery"){ %>
+<% } %>
+
+<%- js(['js/chinese.js','js/main.js','https://cdn.jsdelivr.net/gh/emn178/js-sha1/build/sha1.min.js']) %>
+
+<% if(theme.code_copy.enable) { %>
+    <script src="<%- theme.cdn.clipboard %>"></script>
+    <script src="/plugin/clipboard/codecopy.js"></script>
+    <% } %>
+
+<% if (theme.evanyou.enable) { %>
+    <script async type="text/javascript" src="/js/evanyou.js"></script async>
+<% } else if (theme.ribbon.enable) { %>
+<!-- ribbon -->
+    <script async type="text/javascript" size="<%- theme.ribbon.size %>" alpha="<%- theme.ribbon.alpha %>" zIndex="<%- theme.ribbon.zIndex %>" src="/js/ribbon.min.js"></script>
+<% } else if (theme.ribbon_dynamic.enable) { %>
+<script type="text/javascript" src="/js/ribbon-dynamic.js" async></script>
+<% } %>
+
+<% if (theme.instantclick.enable) { %>
+<!-- instantpage -->
+ <script src="<%- theme.cdn.instantclick %>" data-no-instant></script>
+ <script data-no-instant>InstantClick.init();</script>
+<% } %>
+
+<% if (theme.canvas_nest.enable) { %>
+<!-- canvas_nest -->
+<script async type="text/javascript" color="<%- theme.canvas_nest.color %>" pointColor="<%- theme.canvas_nest.pointColor %>"
+    opacity='<%- theme.canvas_nest.opacity %>' zIndex="<%- theme.canvas_nest.zIndex %>"
+    count="<%- theme.canvas_nest.count %>" src="<%- theme.cdn.canvas_nest %>"></script>
+<% } %>
+
+<% if (config.browsersync.enable) { %>
+    <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    //]]></script>
+<% } %>
+
+<% if (theme.aplayer.enable && page.type === "about") { %>
+    <script src="/js/media.js" ></script>
+<% } %>
+
+<% if (theme.devtools.enable) { %>
+    <script src="/js/dev.js"></script>
+    <script type="module"> window.addEventListener('devtoolschange', event => {console.log("王小明同学，请你认真听课好吗");}); </script>
+<% } %>

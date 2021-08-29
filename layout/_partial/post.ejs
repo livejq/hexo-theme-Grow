@@ -1,0 +1,93 @@
+<div class="layout-post">
+	<%
+		permalink = config.url + config.root + post.path
+	%>
+	<div class="article-title">
+		<%- partial('post/title', {post: post}) %>
+	</div>
+
+	<div class="article-meta">
+		<span>
+			<%- partial('post/date', {post: post, date_format: null}) %>
+		</span>
+		<%= __('split_line')%>
+		<span>
+			<i class="<%- theme.icon.tags %>"></i>
+			<%- partial('post/tag', {post: post}) %>
+		</span>
+		<%= __('split_line') %>
+		<%- partial('post-hits') %>
+	</div>
+	<% if (theme.Google_Adsense.amp_auto_ads) {%>
+	<amp-auto-ads type="adsense" data-ad-client="ca-pub-2863856337188342"></amp-auto-ads>
+	<% } %>
+	<div class="article-content" id="article-content">
+		<% if(page.entitle){ %>
+		<div id="btns">
+			<a class="btn-translate active-translate" onclick="setlang('default',this)" href="javascript:;">英文</a>
+			<a class="btn-translate" onclick="setlang('cn',this)" href="javascript:;">译文</a>
+		</div>
+		<section class="poem">
+			<div class="poem-title">
+				<h3><i><%- page.entitle %> <%- page.cntitle %></i></h3>
+			</div>
+			<div class="poem-content">
+				<%- post.encontent %>
+				<%- post.cncontent %>
+			</div>
+		</section>
+		<script async src="/js/translater.min.js"></script>
+		<% } else { %>
+		<%- post.content %>
+		<% } %>
+	</div>
+
+	<div class="livejq-personal">
+		<% if(theme.appreciate.enable){ %>
+		<%- partial('widget/appreciate', {post: post}) %>
+		<script defer src="/js/popper.min.js"></script>
+		<script defer src="<%- theme.cdn.bootstrap %>"></script>
+		<script defer src="/js/custom.js"></script>
+		<% } %>
+		<% if(theme.share.enable){ %>
+		<%- partial('widget/share', {post: post}) %>
+		<% } %>
+	</div>
+
+	<div id="current-post-cover" data-scr="<%- url_for(post.cover || theme.cover) %>"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<% if (theme.Google_Adsense.manual ) { %>
+		<!-- Ads auto_flower -->
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2863856337188342"
+			data-ad-slot="3371715010" data-ad-format="auto" data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<% } %>
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on"><%= __('comment') %></div>
+				<div><%= __('related_posts') %></div>
+			</div>
+			<div class="investment-title-2">
+				<%- partial('post/navigation', {number: 0}) %>
+			</div>
+		</div>
+		<div class="investment-content below-content">
+			<div class="investment-content-list">
+				<%- partial('third/comment') %>
+			</div>
+			<div class="investment-content-list">
+				<%- partial('post-relate') %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%- partial('third/math', {post: post}) %>
+
+<%- partial('post/lightgallery', {post: post}) %>
+
+<%- partial('widget/toc', {post: post}) %>

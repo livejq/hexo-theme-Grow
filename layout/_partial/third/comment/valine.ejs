@@ -1,0 +1,28 @@
+<div id="comment"></div>
+<script src='/js/Valine.min.js'></script>
+<script>
+    var vPath = '<%- url_for(page.path) %>';
+
+    if ($('#comment').length) {
+        new Valine({
+            el: '#comment',
+            appId: 'kEwsOybwEAWlXUqjoqkzSF6a-gzGzoHsz',
+            appKey: '3fbqazIT2zduj5LA4xbVnoru',
+            master: '8b41648b3ed5b60579165e886721b4a7',
+            tagMeta: ["博主", "小伙伴", "访客"],
+            friends: ["448eced6ea9a36d77fc2484775e1b2a8","d24719e3b7a66cbde951909bac991457","8469028efe54ca257d6dc112c60911c9"],
+            enableQQ: true,
+            path: vPath,
+            placeholder: 'φ(￣ー￣ ) ╮我不下地狱，谁爱下谁下...',
+            verify: true,
+            avatar: 'wavatar',
+            notify: false,
+            visitor: true,
+            meta: ["nick", "mail"],
+            metaPlaceholder: {
+                "nick": "昵称/QQ号",
+                "mail": "邮箱"
+            }
+        });
+    }
+</script>

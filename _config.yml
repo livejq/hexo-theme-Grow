@@ -1,0 +1,267 @@
+# 01-header
+# menu
+menu:
+    home: /
+    archive: /archives/
+    about: /about/
+    friends: /friends/
+    gallery: /gallery/
+
+# favicon & avtor
+# if the value of avtor is false, the 'say' is optional.
+favicon: /img/favicon.png
+logo: /img/logo.png
+say: Welcome
+
+# background_image
+# /img/1.jpg
+# https://source.unsplash.com/collection/954550/1920x1080
+# https://sariay.github.io/Random-img/
+# May be cause CROS bug!
+background_image:
+    mode: normal #normal or random
+    normal_url: /img/0.svg
+    random_max: 11
+    random_url: /img/Random-img/
+
+# show motto
+motto:
+    enable: true
+
+timejs:
+    enable: false
+
+# 02-PROLOADER
+# animation: spinner, transition or cyclic
+preloader:
+    enable: true
+    animation: transition
+
+# 03-INDEX
+# index-style: pure, cart
+index_style: cart
+
+# index_cart_cover
+cover: /img/cart_cover.jpg
+
+# 04-POST
+# post_relate
+relate:
+    enable: true
+    posts_limit: 3
+    posts_excerpt: 70
+
+# post_comment
+comment:
+    enable: true
+
+gitalk:
+    enable: false
+    clientID: eb98d9a6a7d3c934aa
+    clientSecret: 2421ea2da88b3b14422a95ee2557c435908c
+    repo: blog-comment-repo
+    owner: livejq
+    admin: livejq
+    distractionFreeMode: true
+    #去除 more、index.html、?query=123等格式尾部
+    hrefTrimend: '#.*$,\\?.*$,index.html$'
+
+valine:
+    enable: true
+    appid: kEwsOybwEetXUqjoqkzSF6a-gzGoHsz
+    appkey: 3fbqazIT2e5LA4xbVnru
+    placeholder: φ(￣ー￣ ) ╮我不下地狱，谁爱下谁下...
+    verify: true
+    avatar: wavatar
+    notify: false
+
+livere:
+    enable: false
+    livere_uid: MTAyMxxxNjYyMSezEzQ==
+
+changyan:
+    enable: false
+
+disqus:
+    enable: false
+    comments_count:
+        enable: false
+
+busuanzi_count:
+    enable: false
+
+leancloud_count:
+    enable: true
+
+# post_toc
+post_toc:
+    enable: true
+    katelog: true
+
+# post_mathJax
+mathjax:
+    enable: false
+
+# post_code
+code_copy:
+    enable: true
+
+# post_excerpt for index page
+excerpt_cart: 80
+excerpt_pure: 300
+excerpt_link: true
+
+# 05-FOOTER
+# social
+social:
+    github:
+        url: https://github.com/livejq
+        icon: fab fa-github
+    email:
+        url: mailto:cloud@livejq.fun
+        icon: far fa-envelope
+    telegram:
+        url: https://t.me/livejq
+        icon: fab fa-telegram
+    rss:
+        url: https://www.livejq.top/atom.xml
+        icon: fas fa-rss
+    ssl:
+        url: https://myssl.com/www.livejq.top?from=mysslid
+        icon: fab fa-expeditedssl
+
+# copyright
+since: 2018
+content_author: liveJQ
+
+# 06-OTHERS
+# rss
+rss: /atom.xml
+
+# 相册展示
+macy:
+    enable: true # blog根目录source下准备_data/gallery.json文件
+    fancybox: true
+
+# Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+local_search:
+    enable: true
+    # if auto, trigger search by changing input
+    # if manual, trigger search by pressing enter key or search button
+    trigger: auto
+    # show top n results per article, show all results by setting to -1
+    top_n_per_article: 3
+
+#when click, emerge heart
+love:
+    enable: true
+
+#totop
+totop:
+    enable: true
+    icon: fas fa-arrow-up
+
+#icon
+icon:
+    clipboard: far fa-copy
+    tags: fas fa-tags
+    hits: fab fa-hotjar
+    cc: fab fa-creative-commons
+    heart: fas fa-heart
+
+# evanyou
+evanyou:
+    enable: true
+
+# 背景静止彩带.
+ribbon:
+    enable: false
+    size: 90 # 彩带大小, 默认: 90.
+    alpha: 1 # 彩带透明度 (0 ~ 1), 默认: 0.6.
+    zIndex: 0 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1.
+    click_to_change: true # 设置是否每次点击都更换彩带.
+
+# 背景动态彩带.
+ribbon_dynamic:
+    enable: false
+
+# 网页预加载
+instantclick:
+    enable: false
+
+# 配置hack字体
+hackFont:
+    enable: true
+
+# DaoVoice online contact
+daovoice:
+    enable: true
+    appid: a2f69918 # 网页版聊天 http://chat.daovoice.io?id=a2f69918
+
+# Aplayer 音乐播放插件
+aplayer:
+    enable: true
+
+# about site 关于本站
+aboutSite:
+    enable: false
+
+#背景canvas-nest
+canvas_nest:
+    enable: false
+    color: 61,83,235 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+    pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+    opacity: 0.8 # 线条透明度（0~1）, 默认: 0.5
+    zIndex: -1 # 背景的 z-index 属性，css 属性用于控制所在层的位置, 默认: -1.
+    count: 200 # 线条的总数量, 默认: 99
+
+# Google AdSense 广告
+Google_Adsense:
+    enable: true
+    google_ad_client: ca-pub-2863856337188342
+    manual: true
+    google_auto_ads: false
+    amp_auto_ads: false
+
+# 赞赏
+appreciate:
+    enable: true
+    wechat_pay: /img/cut-pic/wechat_pay.png
+    alipay: /img/cut-pic/alipay.png
+
+# 分享
+share:
+    enable: true
+
+#ICP备案信息尾部显示
+icp:
+    enable: true
+    url: http://beian.miit.gov.cn/publish/query/indexFirst.action # 备案链接
+    text: 粤ICP备19099132号-1 # 备案信息
+
+#禁用开发者控制台
+devtools:
+    enable: false
+
+cdn:
+    friend: https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@0f0db55/butterfly/js/Friend.js
+    busuanzi: https://cdn.jsdelivr.net/npm/busuanzi@2.3.0
+    fontawesome: https://kit.fontawesome.com/82e1b0f1b6.js
+    clipboard: https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.0/clipboard.min.js
+    valine: https://cdn.jsdelivr.net/gh/HCLonely/Valine@1.4.14/dist/Valine.min.js
+    jquery: https://cdn.bootcdn.net/ajax/libs/jquery/2.2.1/jquery.min.js
+    hackFont: https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css #https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css 全集
+    canvas_nest: https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js
+    materialize: https://cdn.bootcdn.net/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css
+    leancloud_av: https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js
+    bootstrap: https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js
+    popper: https://cdn.bootcss.com/popper.js/1.15.0/popper.min.js
+    lightgallery_all_min_js: https://cdn.bootcss.com/lightgallery/1.6.4/js/lightgallery-all.min.js
+    lightgallery_css: https://cdn.bootcss.com/lightgallery/1.6.4/css/lightgallery.css
+    jquery_fancybox_min: https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
+    hls: https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    aplayer_min_js: https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js
+    aplayer_min_css: https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css
+    share_css: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
+    share_js: https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js

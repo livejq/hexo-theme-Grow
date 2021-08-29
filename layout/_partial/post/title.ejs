@@ -1,0 +1,5 @@
+<% if (post.link || post.title){ %>
+<a href="<%- url_for(post.path) %>" itemprop="url" target="_blank">
+	<%= post.title %>
+</a>
+<% } %>

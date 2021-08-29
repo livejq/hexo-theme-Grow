@@ -1,0 +1,52 @@
+#nav
+home: Home
+archive: Archive
+archive_a: Archive
+archive_b: Archive：%s
+categories: Category
+tags: Tag
+about: About
+gallery: Gallery
+search: Search
+friends: Friends
+
+#navigation
+prev: Pre page
+next: Next page
+prev_post: Pre post
+next_post: Next post
+load_more: Load more
+load_end: Oops！You hit the wall :(
+to_top: To top
+
+#page
+page: Page:%d
+
+#archive page
+pian:  posts
+post: in total
+
+#tag & category page
+tag_tags: tag
+category_categories: categories
+
+#post
+current_post: Current post
+recent_posts: Recent post
+related_posts: Related post
+publish_date: Posted on
+update_date: Updated on
+split_line: /
+toc: Catalogue
+tweets: Tweets
+comment: Comments
+hits: Hits
+likes: Likes
+load_comment: Load comments
+no_content: There is no content...
+view_all: View all
+share: Share
+
+#others
+powered_by: Powered by
+rss_feed: RSS Feed

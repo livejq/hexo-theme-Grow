@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="<%- theme.cdn.lightgallery_css %>" type="text/css">
+<script src="<%- theme.cdn.lightgallery_all_min_js %>"></script>
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function () {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath +
+			'" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>

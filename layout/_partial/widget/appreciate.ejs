@@ -1,0 +1,32 @@
+<div class="row text-center" style="padding: 50px 0;border-top: 1px dashed #E7E7E7;">
+	<b>
+		<p style="font-size:16px;margin-bottom: 10px;text-align: center;" id="enjoyMsg"></p>
+	</b><button data-toggle="modal" data-target="#reward" class="btn btn-danger btn-lg"
+		style="padding:4px 10px;font-weight:bold;">打赏</button>
+</div>
+
+<div class="modal fade" id="reward" tabindex="-1" role="dialog" aria-labelledby="rewardLabel" aria-hidden="true">
+	<div class="modal-dialog" style="max-width:365px">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<ul id="payTabs" class="nav nav-tabs">
+					<li class="active">
+						<a href="#wechat_pay" data-toggle="tab">微信</a>
+					</li>
+					<li>
+						<a href="#alipay" data-toggle="tab">支付宝</a>
+					</li>
+				</ul>
+				<div id="payMethod" class="tab-content">
+					<div class="tab-pane fade in active" id="wechat_pay">
+						<img src="<%- theme.appreciate.wechat_pay %>" alt="wechat_pay" data-bd-imgshare-binded="1">
+					</div>
+					<div class="tab-pane fade" id="alipay">
+						<img src="<%- theme.appreciate.alipay %>" alt="alipay" data-bd-imgshare-binded="1">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

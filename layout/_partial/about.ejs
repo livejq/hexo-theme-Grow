@@ -1,0 +1,99 @@
+		<div class="about">
+			<section class="weather">
+				<a class="weatherwidget-io" href="https://forecast7.com/zh/23d93115d78/wuhua-county/" data-label_1="梅州"
+				data-label_2="五华" data-font="宋体 (SimSun)" data-icons="Climacons Animated" data-mode="Forecast"
+				data-days="3" data-theme="original">梅州 五华</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = 'https://weatherwidget.io/js/widget.min.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'weatherwidget-io-js');
+			</script>
+			</section>
+			<section class="whoami">
+				<div class="mymotto">
+					<span>“简单不先于复杂，而是在复杂之后.” —— Alan Perlis</span>
+				</div>
+				<div class="about-con">
+					<%- page.content %>
+				</div>
+		<% if(theme.aboutSite.enable){ %>
+				<br>
+				<div class="devTime">
+					<div class="wrapper clearfix-time">
+						<div class="tit">
+							<h5 class="f24">关于本站</h5>
+						</div>
+						<ul class="clearfix-time">
+							<li>
+								<h4 class="f30">2019</h4>
+								<span class="span">Jan.</span>
+								<p class="f14">本站诞生</p>
+							</li>
+							<li>
+								<h4 class="f30">2019</h4>
+								<span class="span">Apr.</span>
+								<p class="f14">第一次优化访问速度</p>
+							</li>
+							<li>
+								<h4 class="f30">2019</h4>
+								<span class="span">Aug.</span>
+								<p class="f14">申请备案成功</p>
+							</li>
+							<li>
+								<h4 class="f30">2019</h4>
+								<span class="span">Sep.</span>
+								<p class="f14">迁移到阿里ECS</p>
+							</li>
+							<li>
+								<h4 class="f30">2019</h4>
+								<span class="span">Oct.</span>
+								<p class="f14">加入Google Adsense</p>
+							</li>
+							<li>
+								<h4 class="f30">2019</h4>
+								<span class="span">Nov.</span>
+								<p class="f14">加入Google/百度搜索引擎</p>
+							</li>
+							<li>
+								<h4 class="f30">2019</h4>
+								<span class="span">Dec.</span>
+								<p class="f14">文章突破50篇</p>
+							</li>
+						</ul>
+						<div class="future">TO BE CONTINUED</div>
+					</div>
+				</div>
+		<% } %>
+		</section>
+		<div class="comment below-content">
+
+            <%- partial('third/comment') %>
+
+        </div>
+		<% if (theme.aplayer.enable) { %>
+				<div id="player"></div>
+				<script src="<%- theme.cdn.hls %>"></script>
+				<script src="/js/APlayer.min.js"></script>
+				<% } %>
+				<!-- d68ba889590c11306770ee69833b82882e22b4bb
+				386a46c63ddcd5e92ac4a0b7af4d273b-->
+				<!-- 27f93defcab9cce703e1e1fd053f6711dcbe6fa4 -->
+				<!-- e55b091ce53b65751999d4e7d9d3a32c62ec61cf -->
+				<!--  8d8e28e764e3c0e502f1abfa05ad5eff87583e6e -->
+				<!--GT b14d4d3144f78ad52e74637b5d7c142c8d8922a2 -->
+				<!-- DaoVoice -->
+				<% if (theme.daovoice.enable) { %>
+				<script type="text/javascript">
+					// daovoice for anonymous
+					daovoice('init', {
+						app_id: "<%- theme.daovoice.appid %>",
+					});
+					daovoice('update');
+				</script>
+		<% } %>

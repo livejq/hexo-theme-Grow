@@ -1,0 +1,5 @@
+<% if( theme.leancloud_count.enable ){ %>
+    <%- partial('third/statistics/leancloud') %>
+<% } else if( theme.busuanzi_count.enable ){ %>
+    <%- partial('third/statistics/busuanzi') %>
+<% } %>

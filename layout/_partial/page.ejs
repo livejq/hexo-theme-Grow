@@ -1,0 +1,16 @@
+<!--content start-->
+<div class="layout-page">
+	<div class="layout-page-container">
+
+		<% if (page.type === "friends") { %>
+
+		<%- partial('friends') %>
+
+		<% } else { %>
+
+			<%- partial('about') %>
+
+		<% } %>
+	</div>
+</div>
+</div>
